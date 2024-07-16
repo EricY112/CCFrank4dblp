@@ -69,6 +69,7 @@ ccf.getRankSpan = function (refine, type) {
     let rankInfo = ccf.getRankInfo(refine, type);
     let span = $("<span>")
         .addClass("ccf-rank")
+        .addClass("notranslate") // 不翻译CCF标签的内容，兼容双语对照翻译
         .addClass(ccf.getRankClass(rankInfo.ranks))
         .text("CCF " + rankInfo.ranks.join("/"));
     if (rankInfo.info.length != 0) {
